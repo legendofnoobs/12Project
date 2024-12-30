@@ -24,13 +24,13 @@ RUN wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86
 WORKDIR /usr/local/bin
 
 # Copy the Bash script into the container
-COPY monitor.sh /usr/local/bin/monitor.sh
+COPY dynamic_monitor.sh /usr/local/bin/dynamic_monitor.sh
 
 # Give execute permissions to the script
-RUN chmod +x /usr/local/bin/monitor.sh
+RUN chmod +x /usr/local/bin/dynamic_monitor.sh
 
 # Set the default command to run the script
-CMD ["bash", "/usr/local/bin/monitor.sh"]
+CMD ["bash", "/usr/local/bin/dynamic_monitor.sh"]
 
 
 # to run the file write in the terminal
